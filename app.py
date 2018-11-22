@@ -24,7 +24,7 @@ def new_cat():
     else:
     	name = request.form['firstname']
     	create_cat(name)
-        return redirect(url_for("catbook_home"))
+    	return redirect(url_for("catbook_home"))
 
 
 if __name__ == '__main__':

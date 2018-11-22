@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+      .fb-color{
+        background-color: #3b539b
+      }
+      .text-logo{
+        font-size: 30px;
+        color: white;
+      }
+      .header_img{
+        width: 33%
+      }
+    </style>
+    <!--BOOTSTRAP CSS import-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  </head>
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-dark fb-color">
+    <a class="text-logo navbar-brand">Catbook</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+      <a href={{ url_for("new_cat") }} class="btn btn-outline-light" class="button">New cat?</a>
+    </form>
+  </nav>
+  <!--Navbar End-->
+  <img class="header_img mx-auto d-block" src="{{url_for('static', filename='images/catbook_logo.jpg')}}">
+
+<form action="/catnew" method="POST">
+    <input type="text" name="firstname" placeholder="Cat Name">
+    <br>
+    <input type="submit" value="Submit">
+</form>

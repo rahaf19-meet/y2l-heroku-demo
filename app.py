@@ -23,7 +23,7 @@ def new_cat():
         return render_template("new_cat.html")
     else:
     	name = request.form['firstname']
-        create_cat(name)
+    	create_cat(name)
         return redirect(url_for("catbook_home"))
 
 
